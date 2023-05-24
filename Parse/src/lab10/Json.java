@@ -1,3 +1,5 @@
+package lab10;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -20,7 +22,7 @@ public class Json {
         logTemerature.put("sites", sites);
 
         try {
-            FileWriter file = new FileWriter("D:\\java_ex\\Parse\\src\\Site-temperature.json", false);
+            FileWriter file = new FileWriter("D:\\java_ex\\Parse\\src\\lab10\\Site-temperature.json", false);
             file.write(logTemerature.toJSONString());
             file.flush();
             file.close();
@@ -35,7 +37,7 @@ public class Json {
         try{
             JSONParser parser = new JSONParser();
             Object obj = parser
-                    .parse(new FileReader("D:\\java_ex\\Parse\\src\\Site-temperature.json"));
+                    .parse(new FileReader("D:\\java_ex\\Parse\\src\\lab10\\Site-temperature.json"));
             JSONObject jsonObject = (JSONObject) obj;
             System.out.println("Корневой элемент: "
                     + jsonObject.keySet().iterator().next());
