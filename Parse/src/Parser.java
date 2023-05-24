@@ -49,9 +49,7 @@ public class Parser {
         site1.put("site", site);
         site1.put("date", date);
         site1.put("temperature", temperature);
-
         sites.add(site1);
-
         logTemerature.put("sites", sites);
 
         try {
